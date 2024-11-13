@@ -1,0 +1,29 @@
+{
+    "train":{
+    "seed": 2024, 
+    "n_epochs": 5,
+    "model_name": "openai/whisper-small",
+    "lang": "Korean",
+    "task": "transcribe",
+    "project_name": "Korean-Whisper-Fine-Tune-Example",
+    "try_name": "[torch] 4090_single_gpu_test_1",
+    "dataset_path": "/home/heiscold/korean_whisper_finetune/data/path_and_transcript.csv",
+    "train_ratio": 0.85,
+    "train_batch_size": 16,
+    "valid_batch_size": 8,
+    "val_step": 300,
+    "print_iter": 1,
+    "eval_iter": 2,
+    "early_stop": 3, 
+    "model_save_base_path": "/home/heiscold/korean_whisper_finetune/torch/ckpt/"
+    },
+"accelerator":{
+    "log_with":"wandb",
+    "mixed_precision":"bf16",
+    "grad_acc_step": 1
+    },
+"optimizer":{
+    "lr": 2e-5,
+    "weight_decay": 1e-6
+    }
+}
