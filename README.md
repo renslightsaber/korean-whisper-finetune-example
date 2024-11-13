@@ -46,13 +46,13 @@ And log-in wandb with your token key in CLI.
 wandb login --relogin '<your-wandb-api-token>'
 ```
 
-accelerate config is needed right before training.    
+accelerate config is needed right before training.       
 : you can decide how many gpus you use and whether to use `mixed_precision` or not.
 ```
 accelerate config
 ```
 
-Let's train! / `BS: 4` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`
+Let's train! / `BS: 4` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`      
 : you can run training `train.py` with `accelerate launch` in CLI environment.
 ```
 CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
