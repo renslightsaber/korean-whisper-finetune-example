@@ -12,7 +12,7 @@ You should download this dataset and move to the `data` folder.
 
 ### In this example code, I just used only a portion of this dataset was used for training.
 - You can download the portion of this dataset at [here](https://drive.google.com/drive/folders/1eshMZ1j9H20aS6_1q3KOYgDKhd2rg_oM?usp=drive_link).
-- :astonished: **data_preprocessing.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13cx7RrbsokFXe8dZ6ox8Qkel4vWzzzUF?usp=sharing): You can create pandas DataFrame with this code. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing))
+- :astonished: **data_preprocessing.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13cx7RrbsokFXe8dZ6ox8Qkel4vWzzzUF?usp=sharing): You can create pandas DataFrame with this code. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)) And this code is included in this repo. [here](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/data/notebooks/data_preprocessing.ipynb)! 
 - :dizzy_face: **korean_whisper_fine-tuning.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PYhfStlMWrlhfF-tYJchaiJxXgwf8n39?usp=sharing): You can fine-tune whisper model at this notebook. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing))   
 
 ## Now you got ready to `train`!
