@@ -53,7 +53,7 @@ accelerate config
 ```
 
 Let's train! / `BS: 4` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`      
-: you can run training `train.py` with `accelerate launch` in CLI environment.
+: you can run training `train.py` with `accelerate launch train.py` instead of `python train.py` in CLI environment.
 ```
 CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
 ```
