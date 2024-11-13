@@ -121,7 +121,7 @@ def main(args):
     print(f"{b_} Model Downloaded {sr_}")
     
     # Optimizer
-    optimizer = torch.optim.Adam(model.parameters(), lr =  hps.train.lr)
+    optimizer = torch.optim.Adam(model.parameters(), lr =  hps.optimizer.lr)
     print(f"{r_} Optimizer Defined {sr_}")
     
     # Scheduler
@@ -129,7 +129,7 @@ def main(args):
     print(f"{s_} steps_per_epoch: {steps_per_epoch} {sr_}")
     
     scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer,
-                                                    max_lr = hps.train.lr,
+                                                    max_lr = hps.optimizer.lr,
                                                     steps_per_epoch = int(steps_per_epoch),
                                                     epochs = hps.train.n_epochs
                                                     )
@@ -145,10 +145,10 @@ def main(args):
 
     # you should log in (wandb) in cli 
     wandb_config= {
-        'dataset': hps.train.dataset,
+        'dataset': "저음질 전화 음성인식 데이터",
         'model': hps.train.project_name,
         "n_epochs": hps.train.n_epochs,
-        'batch_size': hps.train_loader.batch_size,
+        'batch_size': hps.train.train_batch_size,
         'total_step': int(hps.train.n_epochs * len(train_loader)),
     }
     
