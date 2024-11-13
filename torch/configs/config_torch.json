@@ -6,7 +6,7 @@
     "lang": "Korean",
     "task": "transcribe",
     "project_name": "Korean-Whisper-Fine-Tune-Example",
-    "try_name": "[torch] 4090_single_gpu_test_2",
+    "try_name": "[torch] 4090_single_gpu_test_4",
     "dataset_path": "/home/heiscold/korean_whisper_finetune/data/path_and_transcript.csv",
     "train_ratio": 0.8,
     "train_batch_size": 4,
