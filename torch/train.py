@@ -223,7 +223,7 @@ def main(args):
             cer_score_dict = evaluate_func( model, 
                                             accelerator, 
                                             valid_loader, 
-                                            processor,
+                                            tokenizer
                                             )
             accelerator.print(f"Eval_Metric Epoch: {epoch} Finished")
             # evaluate_epoch_metric
@@ -237,7 +237,7 @@ def main(args):
         if (epoch + 1) % print_iter == 0:
             accelerator.print(f"{b_}Epoch: {epoch} | TL:{train_epoch_loss:.3e} | VL:{valid_epoch_loss:.3e} | Lowest Loss:{lowest_loss:.3e} {sr_}")
             if cer_score_dict is not None:
-                accelerator.print(f"{g_}Epoch: {epoch} | CER:{cer_score_dict:.3f} {sr_}")
+                accelerator.print(f"{g_}Epoch: {epoch} | CER:{cer_score_dict['cer']:.3f} {sr_}")
             print()
             
             
