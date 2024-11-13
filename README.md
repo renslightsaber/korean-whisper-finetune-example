@@ -17,7 +17,7 @@ You should download this dataset and move to the `data` folder.
 
 ## Now you got ready to `train`!
 
-### Train(=Fine-Tune)
+### [hf] Train(=Fine-Tune)
 First, you should move to the `hf`.  
 ```
 cd ./hf
@@ -33,6 +33,28 @@ Let's train! / `BS: 16` / `LR: 5e-5` / `NVIDIA GeForce RTX 4090 (x1)`
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
+### [accelerate, torch] Train(=Fine-Tune)
+First, you should move to the `hf`.  
+```
+cd ./torch
+```
+
+And log-in wandb with your token key in CLI. 
+```
+wandb login --relogin '<your-wandb-api-token>'
+```
+
+accelerate config is needed right before training.    
+: you can decide how many gpus you use and whether to use `mixed_precision` or not.
+```
+accelerate config
+```
+
+Let's train! / `BS: 16` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`
+: you can run training `train.py` with `accelerate launch` in CLI environment.
+```
+CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
+```
 
 ## References
 - [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers)
