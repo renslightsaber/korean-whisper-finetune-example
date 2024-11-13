@@ -33,7 +33,9 @@ Let's train! / `BS: 16` / `LR: 5e-5` / `NVIDIA GeForce RTX 4090 (x1)`
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
-### [accelerate, torch] Train(=Fine-Tune)
+## [accelerate, torch] Train(=Fine-Tune)
+: you can train your code with 🤗 huggingface [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure.
+
 First, you should move to the `hf`.  
 ```
 cd ./torch
