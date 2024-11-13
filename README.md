@@ -17,7 +17,7 @@ You should download this dataset and move to the `data` folder.
 
 ## Now you got ready to `train`!
 
-### [hf] Train(=Fine-Tune)
+### [🤗 huggingface Trainer] Train(=Fine-Tune)
 First, you should move to the `hf`.  
 ```
 cd ./hf
@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
 ## [🤗 accelerate] Train(=Fine-Tune)
-: you can train your code with 🤗 huggingface [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure. Of course, this code is based on 🔥 Pytorch.
+: you can train your code with 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure. Of course, this code is based on 🔥 Pytorch. Also, you can use LoRA fine-tune with 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index)
 
 First, you should move to the `hf`.  
 ```
