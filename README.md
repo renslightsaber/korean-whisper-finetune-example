@@ -26,10 +26,10 @@ you can choose other whisper model such as [`openai/whisper-small`](https://hugg
 
 ## Now you got ready to `train`(=Fine-Tune)!
 There are two types of codes: 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer), 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)(based on 🔥 Pytorch). 
-- 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) codes seems to run training much easier and needs 🤗 [TrainingArguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments).
+- 🤗 huggingface's [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) codes seems to run training much easier and needs 🤗 [`TrainingArguments`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments).
 - 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index) (based on 🔥 Pytorch) codes seems to build modules as you want.
 
-### 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) Train
+### 🤗 huggingface's [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) Train
 First, you should move to the `hf`.  
 ```
 cd ./hf
@@ -73,8 +73,8 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
 ## References
 - [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers)
 - [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)
-- 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)
-- 🤗 huggingface's [TrainingArguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
+- 🤗 huggingface's [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)
+- 🤗 huggingface's [`TrainingArguments`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
 - 🤗 huggingface's [Efficient Training on a Single GPU](https://huggingface.co/docs/transformers/v4.24.0/perf_train_gpu_one)
 - 🤗 huggingface's [Methods and tools for efficient training on a single GPU](https://huggingface.co/docs/transformers/perf_train_gpu_one)
 - 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)
