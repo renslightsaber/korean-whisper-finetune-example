@@ -44,6 +44,11 @@ wandb login --relogin '<your-wandb-api-token>'
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
+     
+#### `4090_single_gpu_test_8`
+Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/Korean-Whisper-Fine-Tune-Example/runs/b5f5brkd?nw=nwuserwako)
+
+
 
 ## 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index) (based on 🔥 Pytorch) Train
 you can train your code with 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure. Of course, this code is based on 🔥 `Pytorch`. Also, you can use various fine-tune methods including `LoRA` fine-tune method with 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index).
@@ -69,6 +74,11 @@ accelerate config
 ```
 CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
 ```
+
+#### `[torch] 4090_single_gpu_test_4`
+Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/Korean-Whisper-Fine-Tune-Example/runs/8t0biwup?nw=nwuserwako)
+
+
 
 ## References
 - [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers)
