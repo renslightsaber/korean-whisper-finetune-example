@@ -10,14 +10,26 @@ Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-g
 
 You should download this dataset and move to the `data` folder.     
 
+
 ### In this example code, I just used only a portion of this dataset was used for training.
 - You can download the portion of this dataset at [here](https://drive.google.com/drive/folders/1eshMZ1j9H20aS6_1q3KOYgDKhd2rg_oM?usp=drive_link).
 - :astonished: **data_preprocessing.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13cx7RrbsokFXe8dZ6ox8Qkel4vWzzzUF?usp=sharing): You can create pandas DataFrame with this code. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)) And this code is included in this repo. [here](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/data/notebooks/data_preprocessing.ipynb)! 
 - :dizzy_face: **korean_whisper_fine-tuning.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PYhfStlMWrlhfF-tYJchaiJxXgwf8n39?usp=sharing): You can fine-tune whisper model at this notebook. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing))   
 
-## Now you got ready to `train`!
+## Evaluation Metric: [`CER`](https://huggingface.co/spaces/evaluate-metric/cer)
+In Korean, CER is more appropriate than [`WER`](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
 
-### [🤗 huggingface Trainer] Train(=Fine-Tune)
+## ASR Model: [`openai/whisper-small`](https://huggingface.co/openai/whisper-small)
+you can choose other whisper model such as [`openai/whisper-small`](https://huggingface.co/openai/whisper-small), [`openai/whisper-base`](https://huggingface.co/openai/whisper-base), [`openai/whisper-large-v2`](https://huggingface.co/openai/whisper-large-v2), [`openai/whisper-large-v3-turbo`](https://huggingface.co/openai/whisper-large-v3-turbo), ... if your GPU device can afford.
+- TASK: `transcription`
+- LANG: Korean 🇰🇷
+
+## Now you got ready to `train`(=Fine-Tune)!
+There are two types of codes: 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer), 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)(based on 🔥 Pytorch). 
+- 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) codes seems to run training much easier and needs 🤗 [TrainingArguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments).
+- 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index) (based on 🔥 Pytorch) codes seems to build modules as you want.
+
+### 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer) Train
 First, you should move to the `hf`.  
 ```
 cd ./hf
@@ -33,8 +45,8 @@ wandb login --relogin '<your-wandb-api-token>'
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
-## [🤗 accelerate] Train(=Fine-Tune)
-: you can train your code with 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure. Of course, this code is based on 🔥 Pytorch. Also, you can use various fine-tune methods including `LoRA` fine-tune method with 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index)
+## 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index) (based on 🔥 Pytorch) Train
+you can train your code with 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index). This package can make you feel more comfortable to use multi-gpu training, mixed precisions and others. I am sure. Of course, this code is based on 🔥 `Pytorch`. Also, you can use various fine-tune methods including `LoRA` fine-tune method with 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index).
 
 First, you should move to the `hf`.  
 ```
@@ -61,7 +73,11 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
 ## References
 - [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers)
 - [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)
-- 🤗 [huggingface Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)
-- 🤗 [huggingface TrainingArguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
-- 🤗 [Efficient Training on a Single GPU](https://huggingface.co/docs/transformers/v4.24.0/perf_train_gpu_one)
-- 🤗 [Methods and tools for efficient training on a single GPU](https://huggingface.co/docs/transformers/perf_train_gpu_one)
+- 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)
+- 🤗 huggingface's [TrainingArguments](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
+- 🤗 huggingface's [Efficient Training on a Single GPU](https://huggingface.co/docs/transformers/v4.24.0/perf_train_gpu_one)
+- 🤗 huggingface's [Methods and tools for efficient training on a single GPU](https://huggingface.co/docs/transformers/perf_train_gpu_one)
+- 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)
+- 🤗 huggingface's [Evaluation metrics for ASR](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
+- 🤗 huggingface's [`CER`](https://huggingface.co/spaces/evaluate-metric/cer)
+- 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index).
