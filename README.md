@@ -22,7 +22,11 @@ In task of Korean transcription, CER is more appropriate than [`WER`](https://hu
 ## ASR Model: [`openai/whisper-small`](https://huggingface.co/openai/whisper-small)
 you can choose other whisper model such as [`openai/whisper-tiny`](https://huggingface.co/openai/whisper-tiny), [`openai/whisper-base`](https://huggingface.co/openai/whisper-base), [`openai/whisper-large-v2`](https://huggingface.co/openai/whisper-large-v2), [`openai/whisper-large-v3-turbo`](https://huggingface.co/openai/whisper-large-v3-turbo), ... if your GPU device can afford.
 - TASK: `transcription`
-- LANG: Korean 🇰🇷
+- LANG: Korean 🇰🇷       
+
+Fisrt, you should check the path or parameters in config json file whatever you decide to run code.
+- 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)'s [`config.json`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/hf/configs/config.json) and also the path of [`config.json`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/hf/configs/config.json) at the bottom of [`train.py`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/hf/train.py)
+- 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index) (based on 🔥 Pytorch)'s [`config_torch.json`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/torch/configs/config_torch.json) and also the path of [`config_torch.json`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/torch/configs/config_torch.json) at the bottom of [`train.py`](https://github.com/renslightsaber/korean-whisper-finetune-example/blob/main/torch/train.py)
 
 ## Now you got ready to `train`(=Fine-Tune)!
 There are two types of codes: 🤗 huggingface's [Trainer](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer), 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)(based on 🔥 Pytorch). 
