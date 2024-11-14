@@ -44,7 +44,7 @@ And log-in wandb with your token key in CLI.
 wandb login --relogin '<your-wandb-api-token>'
 ```
 
-**Let's train!** / `BS: 16` / `LR: 5e-5` / `NVIDIA GeForce RTX 4090 (x1)`
+**Let's train!** / `Batch Size: 16` / `LR: 5e-5` / `NVIDIA GeForce RTX 4090 (x1)`
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
@@ -73,7 +73,7 @@ wandb login --relogin '<your-wandb-api-token>'
 accelerate config
 ```
 
-**Let's train!** / `BS: 4` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`      
+**Let's train!** / `Batch Size: 4` / `LR: 2e-5` / `NVIDIA GeForce RTX 4090 (x1)`      
 : you can run training `train.py` with `accelerate launch train.py` instead of `python train.py` in CLI environment.
 ```
 CUDA_VISIBLE_DEVICES=0 accelerate launch train.py
