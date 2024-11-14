@@ -81,8 +81,8 @@ Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-g
 
 
 ## References
-- [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers)
-- [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)
+- [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers) & [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing)
+- 🔥 [`Pytorch`](https://pytorch.org/)
 - 🤗 huggingface's [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer#api-reference%20][%20transformers.Trainer)
 - 🤗 huggingface's [`TrainingArguments`](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
 - 🤗 huggingface's [Efficient Training on a Single GPU](https://huggingface.co/docs/transformers/v4.24.0/perf_train_gpu_one)
