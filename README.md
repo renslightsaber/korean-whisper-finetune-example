@@ -94,4 +94,4 @@ Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-g
 - 🤗 huggingface's [`accelerate`](https://huggingface.co/docs/accelerate/index)
 - 🤗 huggingface's [Evaluation metrics for ASR](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
 - 🤗 huggingface's [`CER`](https://huggingface.co/spaces/evaluate-metric/cer)
-- 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index).
+- 🤗 huggingface's [`peft`](https://huggingface.co/docs/peft/index)
