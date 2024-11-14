@@ -1,5 +1,5 @@
 # korean-whisper-finetune-example
-This repo is created based on [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers) Blog Post and [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing). Actually, purpose of this repo is share how to finetune `openai/whisper-` model. I just modified the code in python script format for training in CLI environment. Also, I just added **[`wandb`](https://kr.wandb.ai/)** logging.
+This repo is created based on [[NLP] OpenAI Whisper Fine-tuning for Korean ASR with HuggingFace Transformers](https://velog.io/@mino0121/NLP-OpenAI-Whisper-Fine-tuning-for-Korean-ASR-with-HuggingFace-Transformers) Blog Post and [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing). Actually, purpose of this repo is share how to finetune `openai/whisper-` model (=this is why perfomance of fine-tuned models is not so good). I just modified the code in python script format for training in CLI environment. Also, I just added **[`wandb`](https://kr.wandb.ai/)** logging.
 
 Click 👉 [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/Korean-Whisper-Fine-Tune-Example)
 
