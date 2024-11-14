@@ -20,7 +20,7 @@ You should download this dataset and move to the `data` folder.
 In task of Korean transcription, CER is more appropriate than [`WER`](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
 
 ## ASR Model: [`openai/whisper-small`](https://huggingface.co/openai/whisper-small)
-you can choose other whisper model such as [`openai/whisper-small`](https://huggingface.co/openai/whisper-small), [`openai/whisper-base`](https://huggingface.co/openai/whisper-base), [`openai/whisper-large-v2`](https://huggingface.co/openai/whisper-large-v2), [`openai/whisper-large-v3-turbo`](https://huggingface.co/openai/whisper-large-v3-turbo), ... if your GPU device can afford.
+you can choose other whisper model such as [`openai/whisper-tiny`](https://huggingface.co/openai/whisper-tiny), [`openai/whisper-base`](https://huggingface.co/openai/whisper-base), [`openai/whisper-large-v2`](https://huggingface.co/openai/whisper-large-v2), [`openai/whisper-large-v3-turbo`](https://huggingface.co/openai/whisper-large-v3-turbo), ... if your GPU device can afford.
 - TASK: `transcription`
 - LANG: Korean 🇰🇷
 
