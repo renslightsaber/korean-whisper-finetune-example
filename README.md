@@ -17,7 +17,7 @@ You should download this dataset and move to the `data` folder.
 - :dizzy_face: **korean_whisper_fine-tuning.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PYhfStlMWrlhfF-tYJchaiJxXgwf8n39?usp=sharing): You can fine-tune whisper model at this notebook. (source: [colab code](https://colab.research.google.com/drive/1wSp66cLd0C6WzR9hCdvlHfIEjcd2ZfEj?usp=sharing))   
 
 ## Evaluation Metric: [`CER`](https://huggingface.co/spaces/evaluate-metric/cer)
-In Korean, CER is more appropriate than [`WER`](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
+In task of Korean transcription, CER is more appropriate than [`WER`](https://huggingface.co/learn/audio-course/chapter5/evaluation#evaluation-metrics-for-asr)
 
 ## ASR Model: [`openai/whisper-small`](https://huggingface.co/openai/whisper-small)
 you can choose other whisper model such as [`openai/whisper-small`](https://huggingface.co/openai/whisper-small), [`openai/whisper-base`](https://huggingface.co/openai/whisper-base), [`openai/whisper-large-v2`](https://huggingface.co/openai/whisper-large-v2), [`openai/whisper-large-v3-turbo`](https://huggingface.co/openai/whisper-large-v3-turbo), ... if your GPU device can afford.
