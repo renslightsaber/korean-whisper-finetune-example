@@ -20,13 +20,14 @@ def train_one_epoch(model,
                     step,
                     mode = "train",
                     logging = True,
+                    gradient_accumulation_steps = 1
                     ):
 
     model.train()
     total_loss = 0
 
-    bar = tqdm(data_loader, total= len(data_loader))
-    for batch in bar:
+    bar = enumerate(tqdm(data_loader, total= len(data_loader)))
+    for batch_idx, batch in bar:
         with accelerator.accumulate(model):
             
             with accelerator.autocast():
@@ -42,23 +43,25 @@ def train_one_epoch(model,
         if accelerator.sync_gradients:
             max_grad_norm = 1
             accelerator.clip_grad_norm_(model.parameters(), max_grad_norm)
-            
-            # Optimizer step
-            optimizer.step()
+        
+        # Optimizer step
+        optimizer.step()
 
-            # Zero the gradients
-            optimizer.zero_grad()
+        # Zero the gradients
+        optimizer.zero_grad()
 
-            # Scheduler step
-            if scheduler is not None:
-                scheduler.step()
+        # Scheduler step
+        if scheduler is not None:
+            scheduler.step()
         
+        # Increment global step and log after gradient_accumulation_steps updates
+        if (batch_idx + 1) % gradient_accumulation_steps == 0:
+            step += 1
+            log_metrics = {f"{mode}/loss": loss.item() }
+            if logging:
+                accelerator.log(log_metrics, step=step)
         
-        log_metrics = {f"{mode}/loss": loss.item() }
-        if logging:
-            accelerator.log(log_metrics, step=step)
-        
-        step += 1
+
             
 
     # Train Epoch Loss
