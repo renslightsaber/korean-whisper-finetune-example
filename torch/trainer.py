@@ -60,9 +60,6 @@ def train_one_epoch(model,
             log_metrics = {f"{mode}/loss": loss.item() }
             if logging:
                 accelerator.log(log_metrics, step=step)
-        
-
-            
 
     # Train Epoch Loss
     train_epoch_loss = total_loss / len(data_loader)
