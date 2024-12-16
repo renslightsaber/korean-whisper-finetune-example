@@ -78,9 +78,13 @@ def main(args):
     model_name = hps.train.model_name
     lang = hps.train.lang
     print(f"{r_} model_name: {model_name}, lang: {lang}, task: {hps.train.task} {sr_}")
-    print()
     # model_name = "openai/whisper-small"
     # lang = "Korean"
+
+    batch_size = hps.train.train_batch_size, 
+    gradient_accumulation_steps = hps.accelerator.grad_acc_step
+    print(f"{b_} Batch Size: {batch_size}, Gradient_Accumulation_Steps: {gradient_accumulation_steps} {sr_}")
+    print()
 
     # Set Seed
     set_seed(hps.train.seed)
@@ -192,6 +196,7 @@ def main(args):
                                                                             step, 
                                                                             mode ="train",
                                                                             logging = True,
+									    gradient_accumulation_steps = gradient_accumulation_steps
                                                                             )
         accelerator.print(f"Train Epoch: {epoch} Finished")
         # train-epoch_metric
